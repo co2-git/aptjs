@@ -1,0 +1,29 @@
+doctype html
+meta(charset='utf-8')
+title= app.title
+link(rel="icon" type="image/png" href="/images/favicon.png")
+link(rel='stylesheet' href='/bower_components/foundation/css/normalize.css')
+link(rel='stylesheet' href='/bower_components/foundation/css/foundation.min.css')
+link(rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.min.css')
+link(rel='stylesheet' href='/css/main.css')
+
+section(ng-app='aptjs')
+  .row.collapse
+    .columns.small-12
+      .flash
+
+  .row
+    .columns.small-12
+      h1= app.title
+  
+  // block content
+  
+  ng-view
+
+script(src='/bower_components/jquery/dist/jquery.min.js')
+script(src='/bower_components/foundation/js/foundation.min.js')
+script(src='/bower_components/angular/angular.min.js')
+script(src='/bower_components/angular-route/angular-route.min.js')
+script(src='/bower_components/moment/moment.js')
+script(src='/socket.io/socket.io.js')
+script(src='/bundle.js')
